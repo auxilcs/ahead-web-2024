@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="../css/event.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="stylesheet" href="../css/caraousalTeam.css" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Ahead | IITR</title>
+</head>
+
+<body onload="myFunction()">
+  <div id="preLoader"></div>
+  <div class="main">
+    <header>
+      <nav>
+        <ul class="nav-bar">
+          <div class="logo-main">
+            <div class="logo"><img src="../img/iit.png" alt /></div>
+            <div class="logo"><img src="../img/Logo-nav.png" alt /></div>
+          </div>
+          <input type="checkbox" id="check" />
+          <span class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../event/event.html">Events</a></li>
+            <li><a href="../team.html">Team</a></li>
+            <li><a href="../research.html">Research</a></li>
+            <li><a href="../expertise.html">Expertise</a></li>
+            <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+          </span>
+          <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+      </nav>
+    </header>
+    <div class="article">
+      <h1>Events</h1>
+      <p class="underline"></p>
+      <div class="nav-article">
+        <div class="resume" id="btn1" onclick="openWorkshop()">Workshop</div>
+        <div class="resume" id="btn2" onclick="openDiscussion()">
+          Fortnight Discussion
+        </div>
+        <div class="resume" id="btn3" onclick="openConference()">
+          Conference
+        </div>
+      </div>
+      <div class="member" id="mainMember">
+        <!-- <div class='swiper mySwiper teamContent' id="workshop">
+          <div id="upcoming_workshop"></div>
+          <h1 style="margin-bottom: 12px;">WorkShops</h1>
+          <div class='swiper-wrapper' id="workshop_sub">
+          </div>
+          <div class='swiper-button-next'></div>
+          <div class='swiper-button-prev'></div>
+          <div class='swiper-pagination'></div>
+          <div class='autoplay-progress'>
+            <span></span>
+          </div>
+        </div> -->
+        <div class="teamContent" id="workshop" >
+          <div id="upcoming_workshop"></div>
+          <a href="../event/past_workshop.html"><h1>Past Workshops🔗</h1></a>
+        </div>
+        <div class="teamContent" id="discussion"></div>
+        <div class="teamContent" id="conference"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://www.linkedin.com/in/hardik-aa21b4227/" target="_blank">
+        <li>Designed and Developed by Hardik🔗</li>
+      </a>
+    </div>
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+  </div>
+  <script src="../js/toTop.js"></script>
+  <!-- <script src="/app.js"></script> -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var loader = document.getElementById('preLoader')
+    function myFunction() {
+      loader.style.display = 'none'
+    }
+  </script>
+  <script type="text/JavaScript">
+      var workshop=document.getElementById("workshop")
+      var discussion=document.getElementById("discussion")
+      var conference=document.getElementById("conference")
+
+      var btn1=document.getElementById("btn1")
+      var btn2=document.getElementById("btn2")
+      var btn3=document.getElementById("btn3")
+
+      function openWorkshop(){
+          workshop.style.transform="translateX(0)";
+          discussion.style.transform="translateX(100vw)";
+          conference.style.transform="translateX(100vw)";
+          btn1.style.backgroundColor="#3c4ec2d8";
+          btn2.style.backgroundColor="#3D4785";
+          btn3.style.backgroundColor="#3D4785";
+          // mainMember.style.height="100vh"
+      }
+      function openDiscussion(){
+          workshop.style.transform="translateX(100vw)";
+          discussion.style.transform="translateX(0)";
+          conference.style.transform="translateX(100vw)";
+          btn1.style.backgroundColor="#3D4785";
+          btn2.style.backgroundColor="#3c4ec2d8";
+          btn3.style.backgroundColor="#3D4785";
+          // mainMember.style.height="400vh";
+      }
+      function openConference(){
+          workshop.style.transform="translateX(100vw)";
+          discussion.style.transform="translateX(100vw)";
+          conference.style.transform="translateX(0)";
+          btn1.style.backgroundColor="#3D4785";
+          btn2.style.backgroundColor="#3D4785";
+          btn3.style.backgroundColor="#3c4ec2d8";
+          // mainMember.style.height="210vh"
+      }
+    </script>
+  <!-- <script src="/projectScript.js"></script> -->
+  <script>
+    fetch("../json/teamCaraousalData.json")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (projects) {
+        let placeholder = document.querySelector("#workshop_sub");
+        let out = ``;
+        for (let project of projects) {
+          out += `
+            <div class="swiper-slide"><div>
+                <img src="${project.Imagepath}" alt="ImageCaraousal">
+                <p>${project.line}</p>
+            </div></div>
+            `;
+        }
+        placeholder.innerHTML = out;
+      });
+
+    var i = 1
+    fetch('../json/fortnightDiscussionData.json')
+      .then(function (response) {
+        return response.json()
+      })
+      .then(function (projects) {
+        let placeholder = document.querySelector('#discussion')
+        let out = `
+        <h1>Fortnight Discussions</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NO. </th>
+                        <th> TOPIC </th>
+                        <th> PRESENTER </th>
+                        <th> START DATE </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `
+        for (let project of projects) {
+          out += `
+            <tr>
+                <td> ${i} </td>
+                <td> ${project.topic} </td>
+                <td> ${project.presenter} </td>
+                <td> ${project.date}</td>
+            </tr>
+            `
+          i++
+        }
+        out += `</tbody>
+            </table>`
+        placeholder.innerHTML = out
+      })
+
+    var l = 1
+    fetch('../json/upcoming_workshop.json')
+      .then(function (response) {
+        return response.json()
+      })
+      .then(function (up_workshops) {
+        let placeholder = document.querySelector('#upcoming_workshop')
+        let out = `
+        <h1>Upcoming Workshops</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NO. </th>
+                        <th> TITLE </th>
+                        <th> DATE </th>
+                        <th> LOCATION </th>
+                        <th> INSTRUCTOR(s) </th>
+                        <th> REGISTRAION LINK </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `
+        for (let up_workshop of up_workshops) {
+          out += `
+            <tr>
+                <td> ${l} </td>
+                <td> ${up_workshop.name} </td>
+                <td> ${up_workshop.date} </td>
+                <td> ${up_workshop.location}</td>
+                <td> ${up_workshop.instructor}</td>
+                <td> <a href="${up_workshop.link}" target="_blank">🔗</a></td>
+            </tr>
+            `
+          l++
+        }
+        out += `</tbody>
+            </table>`
+        placeholder.innerHTML = out
+      })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector('.autoplay-progress svg')
+    const progressContent = document.querySelector('.autoplay-progress span')
+    var swiper = new Swiper('.mySwiper', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty('--progress', 1 - progress)
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`
+        }
+      }
+    })
+  </script>
+  <script>
+    AOS.init()
+  </script>
+</body>
+
+</html>
