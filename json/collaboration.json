@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Lancaster University",
+      "image": "./img/collab/lancaster_university.png",
+      "link": "https://www.lancaster.ac.uk/"
+    },
+    {
+      "name": "University Of Johannesburg",
+      "image": "./img/collab/johannesburg_university.png",
+      "link": "https://www.uj.ac.za/"
+    },
+    {
+      "name": "University of Birmingham",
+      "image": "./img/collab/bermingham_university.png",
+      "link": "https://www.birmingham.ac.uk/"
+    }
+  ]
+  

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="./css/team.css" />
+    <link rel="stylesheet" href="./css/caraousalTeam.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<title>Ahead | IITR</title>
+</head>
+
+<body onload="myFunction()">
+    <div id="preLoader"></div>
+    <div class="main">
+        <header>
+            <nav>
+                <ul class='nav-bar'>
+                    <div class="logo-main">
+                        <div class="logo"><img src="./img/iit.png" alt=""></div>
+                        <div class="logo"><img src="./img/Logo-nav.png" alt=""></div>
+                    </div>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./event/event.html">Events</a></li>
+                        <li><a href="./team.html">Team</a></li>
+                        <li><a href="./research.html">Research</a></li>
+                        <li><a href="./expertise.html">Expertise</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
+            </nav>
+        </header>
+        <div class="article">
+            <h1>Team</h1>
+            <p class="underline"></p>
+        </div>
+        <div class="article">
+            <h3>Mentor</h3>
+            <!-- <p class="underline"></p> -->
+        </div>
+        <div class="home-container">
+            <a href="https://iitr.ac.in/~HS/Pratap_Chandra_Mohanty">
+                <div class="profile-card-prof">
+                    <div class="img-prof">
+                        <img src="./img/team/PCM.png">
+                    </div>
+                    <div class="caption-prof">
+                        <h3>Prof. Pratap Mohanty</h3>
+                        <p>Associate Professor <br> IIT Roorkee</p>
+                        <div class="social-links-prof">
+                            <a href="https://www.linkedin.com/in/dr-pratap-mohanty-112a3873/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://x.com/pratapjnu "><i class="fa-brands fa-twitter"></i></a>
+                            <a href="mailto:pratap.mohanty@hs.iitr.ac.in"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="article">
+            <h3>Research Scholars</h3>
+            <!-- <p class="underline"></p> -->
+        </div>
+        <div class="home-container" id="teamMember"></div>
+
+
+        <div class="article">
+            <h3>Alumni</h3>
+            <!-- <p class="underline"></p> -->
+        </div>
+        <div class="home-container" id="alumniMember"></div>
+
+
+        <div class="article">
+            <h3>M.Sc Scholars</h3>
+        </div>
+        <div id="msc">
+            <div class="info-container"></div>
+        </div>
+
+
+        <div class="article">
+            <h3>Research Assistants</h3>
+        </div>
+        <div id="research-assistant">
+            <div class="info-container"></div>
+        </div>
+
+
+        <div class="article">
+            <h3>Interns</h3>
+        </div>
+        <div id="intern">
+            <div class="info-container"></div>
+        </div>
+
+
+        <div class="article">
+            <h1>Collaborations</h1>
+            <p class="underline"></p>
+        </div>
+        <div class="highlight-gallery">
+            <div class="home-highlight"></div>
+        </div>
+
+
+        <div class="article">
+            <h1>Gallery</h1>
+            <p class="underline"></p>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="teamCaraousal">
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="autoplay-progress">
+                <span></span>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.linkedin.com/in/hardik-aa21b4227/" target="_blank">
+                <li>Designed and Developed by Hardik🔗</li>
+            </a>
+        </div>
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+
+    </div>
+    <script src="./js/toTop.js"></script>
+    <script src="./js//teamCollabCaraousal.js"></script>
+    <script src="./js/teamMisInfo.js"></script>
+    <!-- <script src="/app.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var loader = document.getElementById("preLoader");
+        function myFunction() {
+            loader.style.display = "none";
+        }
+    </script>
+    <script>
+        fetch("./json/teamdata.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (projects) {
+                let placeholder = document.querySelector("#teamMember");
+                let out = ``;
+                for (let project of projects) {
+                    out += `
+            <a href=${project.link} ><div class="profile-card">
+                <div class="img">
+                    <img src="${project.pp}">
+                </div>
+                <div class="caption">
+                    <h3>${project.Name}</h3>
+                    <p>Ph.D Scholar</p>
+                    <div class="social-links">
+                        <a href="${project.la}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="${project.ta}"  target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="mailto: ${project.email}" target="_blank"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div></a>
+            `;
+                }
+                placeholder.innerHTML = out;
+            });
+
+
+        fetch("./json/teamCaraousalData.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (projects) {
+                let placeholder = document.querySelector("#teamCaraousal");
+                let out = ``;
+                for (let project of projects) {
+                    out += `
+            <div class="swiper-slide"><div>
+                <img src="${project.Imagepath}" alt="ImageCaraousal">
+                <p>${project.line}</p>
+                </div></div>
+            `;
+                }
+                placeholder.innerHTML = out;
+            });
+
+            
+        fetch("./json/alumnidata.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (projects) {
+                let placeholder = document.querySelector("#alumniMember");
+                let out = ``;
+                for (let project of projects) {
+                    out += `
+            <a href="#" ><div class="profile-card">
+                <div class="img">
+                    <img src="${project.pp}">
+                </div>
+                <div class="caption">
+                    <h3>${project.name}</h3>
+                    <p></p>
+                    <div class="social-links">
+                        <a href="${project.webp}" target="_blank"><i class="fa fa-link"></i></a>
+                        <a href="${project.gslink}" target="_blank"><i class="fa-brands fa-google"></i></a>
+                    </div>
+                </div>
+            </div></a>
+            `;
+                }
+                placeholder.innerHTML = out;
+            });
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            }
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Program Evaluation",
+        "link": "https://example.com/program_evaluation",
+        "link_available": true
+    },
+    {
+        "name": "Macro panel data",
+        "link": "https://example.com/macro_panel_data",
+        "link_available": true
+    },
+    {
+        "name": "Bibliometric and Meta Analysis",
+        "link": "https://example.com/bibliometric_meta_analysis",
+        "link_available": true
+    },
+    {
+        "name": "Content analysis",
+        "link": "https://example.com/content_analysis",
+        "link_available": true
+    },
+    {
+        "name": "Multilevel analysis",
+        "link": "https://example.com/multilevel_analysis",
+        "link_available": true
+    },
+    {
+        "name": "Survey panel",
+        "link": "https://example.com/survey_panel",
+        "link_available": true
+    },
+    {
+        "name": "Efficiency analysis",
+        "link": "https://example.com/efficiency_analysis",
+        "link_available": true
+    },
+    {
+        "name": "Spatial analysis",
+        "link": "https://example.com/spatial_analysis",
+        "link_available": true
+    },
+    {
+        "name": "Equity analysis",
+        "link": "https://example.com/equity_analysis",
+        "link_available": true
+    },
+    {
+        "name": "Data Envelopment Analysis",
+        "link": "https://example.com/data_envelopment_analysis",
+        "link_available": true
+    }
+]

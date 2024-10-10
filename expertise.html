@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="./css/expertise.css" />
+    <link rel="stylesheet" href="./css/project.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Ahead | IITR</title>
+</head>
+<body onload="myFunction()">
+    <div id="preLoader"></div>
+    <div class="main">
+        <header>
+            <nav>
+                <ul class='nav-bar'>
+                    <div class="logo-main">
+                        <div class="logo"><img src="./img/iit.png" alt=""></div>
+                        <div class="logo"><img src="./img/Logo-nav.png" alt=""></div>
+                    </div>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./event/event.html">Events</a></li>
+                        <li><a href="./team.html">Team</a></li>
+                        <li><a href="./research.html">Research</a></li>
+                        <li><a href="./expertise.html">Expertise</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
+            </nav>
+        </header> 
+        <div class="article">
+            <h1>Expertise</h1>
+            <p class="underline"></p>
+            <div class="nav-article">
+                <div class="resume" id="btn1" onclick="openCourses()">Courses</div>
+                <div class="resume" id="btn2" onclick="openMethods()">Methods</div>
+                <div class="resume" id="btn3" onclick="openDataset()">Dataset</div>
+                <div class="resume" id="btn4" onclick="openSoftware()">Software</div>
+            </div>
+            <div class="member">
+                <div class="teamContent" id="courses">  
+                </div>
+                <div class="teamContent" id="methods">
+                </div>
+                <div class="teamContent" id="dataset">
+                </div>
+                <div class="teamContent" id="software">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.linkedin.com/in/hardik-aa21b4227/" target="_blank">
+                <li>Designed and Developed by Hardik🔗</li>
+            </a>
+        </div>
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        
+    </div>
+    <script src="./js/toTop.js"></script>
+    <!-- <script src="/app.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var loader=document.getElementById("preLoader");
+        function myFunction(){
+            loader.style.display="none";
+        }
+    </script>
+    <script type="text/JavaScript">
+        var courses=document.getElementById("courses")
+        var methods=document.getElementById("methods")
+        var dataset=document.getElementById("dataset")
+        var software=document.getElementById("software")
+
+        var btn1=document.getElementById("btn1")
+        var btn2=document.getElementById("btn2")
+        var btn3=document.getElementById("btn3")
+        var btn4=document.getElementById("btn4")
+        // const mediaQuery = window.matchMedia('(max-width: 900px)');
+        
+        function openCourses(){
+            courses.style.transform="translateX(0)";
+            methods.style.transform="translateX(100vw)";
+            dataset.style.transform="translateX(100vw)";
+            software.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3c4ec2d8";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3D4785";
+            // mainMember.style.height="100vh"
+        }
+        function openMethods(){
+            courses.style.transform="translateX(100vw)";
+            methods.style.transform="translateX(0)";
+            dataset.style.transform="translateX(100vw)";
+            software.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3c4ec2d8";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3D4785";
+        }
+        function openDataset(){
+            courses.style.transform="translateX(100vw)";
+            methods.style.transform="translateX(100vw)";
+            dataset.style.transform="translateX(0)";
+            software.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3c4ec2d8";
+            btn4.style.backgroundColor="#3D4785";
+        }
+        function openSoftware(){
+            courses.style.transform="translateX(100vw)";
+            methods.style.transform="translateX(100vw)";
+            dataset.style.transform="translateX(100vw)";
+            software.style.transform="translateX(0)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3c4ec2d8";
+        }
+    </script>
+    <script src="./js/projectScript.js"></script>
+    <script>
+        fetch("./json/courses.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(courses){
+        let placeholder = document.querySelector("#courses");
+        let out = `
+        <h1>Courses</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> MOOC COURSES </th>
+                        <th> TOPIC </th>
+						<th> PLATFORM </th>
+                        <th> FUNDING AGENCY </th>
+                        <th> TEACHING ASSISTANT </th>
+                        <th> START DATE </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let course of courses){
+            out += `
+            <tr>
+                <td> <iframe width="300px" height="200px" src="${course.course}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td> 
+                <td> <a href="${course.link}">${course.topic}</a> </td>
+                <td> ${course.platform} </td>
+                <td>${course.funda}</p></td>
+                <td>${course.ta}</p></td>
+                <td> ${course.date}</td>
+            </tr>`;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+        var i=1;
+        fetch("./json/dataset.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(datasets){
+        let placeholder = document.querySelector("#dataset");
+        let out = `
+        <h1>Dataset</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NAME OF THE DATASET </th>
+                        <th> LINK </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let dataset of datasets){
+            out += `
+            <tr>
+                <td> ${dataset.name} </td>
+                <td><a href="${dataset.link}" target="_blank">🔗</a></td>
+            </tr>
+            `;
+            i++;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+        var l=1;
+        fetch("./json/methods.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(methods){
+        let placeholder = document.querySelector("#methods");
+        let out = `
+        <h1>Methods</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NAME OF THE METHOD </th>
+                        <th> LINK </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let method of methods){
+            out += `
+            <tr>
+                <td> ${method.name} </td>
+                <td><a href="${method.link}" target="_blank">🔗</a></td>
+            </tr>
+            `;
+            l++;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+        var j=1;
+        fetch("./json/software.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(softwares){
+        let placeholder = document.querySelector("#software");
+        let out = `
+        <h1>Softwares</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> LOGO </th>
+                        <th> NAME OF THE SOFTWARE </th>
+                        <th> DOCUMENTATION </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let software of softwares){
+            out += `
+            <tr>
+                
+                <td><img src="${software.img_link}"></img></td> 
+                <td> ${software.name}</td>
+                <td><a href="${software.link}" target="_blank">🔗</a></td>
+            </tr>`;
+            j++;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          cssMode: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          mousewheel: true,
+          keyboard: true,
+        });
+      </script>
+      <script>
+        AOS.init();
+      </script>
+</body>
+
+</html>

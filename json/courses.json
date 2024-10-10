@@ -1,0 +1,42 @@
+[
+    {
+        "topic": "Health Economics",
+        "area": "Pedagogy and Training",
+        "platform": "SWAYAM's NPTEL MOOC",
+        "link": "https://onlinecourses.nptel.ac.in/noc24_ec07/preview",
+        "funda": "MHRD and IITR",
+        "date": "1st January, 2024",
+        "course": "https://www.youtube.com/embed/nwX0omzMQSE?si=8AEmYllQdBhGcsQy",
+        "ta": "Akash Pal, Priyandu M Bajpayee & Kripa Nandan"
+    },
+    {
+        "topic": "Exploring Survey Data on Health Care",
+        "area": "Pedagogy and Training",
+        "platform": "SWAYAM's NPTEL MOOC",
+        "link": "https://onlinecourses.nptel.ac.in/noc23_hs67/preview",
+        "funda": "MHRD and IITR",
+        "date": "4th July, 2022",
+        "course": "https://www.youtube.com/embed/ToIWiUmSmuM?si=eIWn0Zbwu99H-K_o",
+        "ta": "Milind K Yadav & Kamal Sharma"
+    },
+    {
+        "topic": "Handling Large-Scale Unit Level Data Using STATA",
+        "area": "Pedagogy and Training",
+        "platform": "SWAYAM's NPTEL MOOC",
+        "link": "https://onlinecourses.nptel.ac.in/noc21_hs32/preview",
+        "funda": "MHRD and IITR",
+        "date": "18th January, 2021",
+        "course": "https://www.youtube.com/embed/mpk97ls0_yA?si=uX6D3c5rcPZ4CE6G",
+        "ta": "Shruti Shuvam"
+    },
+    {
+        "topic": "International Trade - Theory and Empirics",
+        "area": "Pedagogy and Training",
+        "platform": "SWAYAM's NPTEL MOOC",
+        "link": "https://onlinecourses.nptel.ac.in/noc21_hs46/preview",
+        "funda": "MHRD and IITR",
+        "date": "1st August, 2019",
+        "course": "https://www.youtube.com/embed/lQuo_sAkFSo?si=Jp7X74lhDfmkFqsl",
+        "ta": "Soma Bharti"
+    }
+]

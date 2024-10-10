@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="./css/research.css" />
+    <link rel="stylesheet" href="./css/project.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Ahead | IITR</title>
+</head>
+<body onload="myFunction()">
+    <div id="preLoader"></div>
+    <div class="main">
+        <header>
+            <nav>
+                <ul class='nav-bar'>
+                    <div class="logo-main">
+                        <div class="logo"><img src="./img/iit.png" alt=""></div>
+                        <div class="logo"><img src="./img/Logo-nav.png" alt=""></div>
+                    </div>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./event/event.html">Events</a></li>
+                        <li><a href="./team.html">Team</a></li>
+                        <li><a href="./research.html">Research</a></li>
+                        <li><a href="./expertise.html">Expertise</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
+            </nav>
+        </header> 
+        <div class="article">
+            <h1>Research</h1>
+            <p class="underline"></p>
+            <div class="nav-article">
+                <div class="resume" id="btn1" onclick="openProjects()">Projects</div>
+                <div class="resume" id="btn4" onclick="openNewspaper()">Newspaper Articles</div>
+                <div class="resume" id="btn2" onclick="openPublications()">Journal Articles</div>
+                <div class="resume" id="btn3" onclick="openConference()">Conference Articles</div>
+                <div class="resume" id="btn5" onclick="openBlogs()">Blogs</div>
+            </div>
+            <div class="member" id="mainMember">
+                <div class="teamContent" id="projects">  
+                </div>
+                <div class="teamContent" id="publications">
+                </div>
+                <div class="teamContent" id="conference">
+                </div>
+                <div class="teamContent" id="newspaper">
+                </div>
+                <div class="teamContent" id="blogs">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.linkedin.com/in/hardik-aa21b4227/" target="_blank">
+                <li>Designed and Developed by Hardik🔗</li>
+            </a>
+        </div>
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        
+    </div>
+    <script src="./js/toTop.js"></script>
+    <!-- <script src="/app.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var loader=document.getElementById("preLoader");
+        function myFunction(){
+            loader.style.display="none";
+        }
+    </script>
+    <script type="text/JavaScript">
+        var projects=document.getElementById("projects")
+        var publications=document.getElementById("publications")
+        var conference=document.getElementById("conference")
+        var newspaper=document.getElementById("newspaper")
+        var blogs=document.getElementById("blogs")
+        var mainMember=document.getElementById("mainMember")
+
+        var btn1=document.getElementById("btn1")
+        var btn2=document.getElementById("btn2")
+        var btn3=document.getElementById("btn3")
+        var btn4=document.getElementById("btn4")
+        var btn5=document.getElementById("btn5")
+        // const mediaQuery = window.matchMedia('(max-width: 900px)');
+        
+        function openProjects(){
+            projects.style.transform="translateX(0)";
+            publications.style.transform="translateX(100vw)";
+            conference.style.transform="translateX(100vw)";
+            newspaper.style.transform="translateX(100vw)";
+            blogs.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3c4ec2d8";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3D4785";
+            btn5.style.backgroundColor="#3D4785";
+            // mainMember.style.height="100vh"
+        }
+        function openPublications(){
+            projects.style.transform="translateX(100vw)";
+            publications.style.transform="translateX(0)";
+            conference.style.transform="translateX(100vw)";
+            newspaper.style.transform="translateX(100vw)";
+            blogs.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3c4ec2d8";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3D4785";
+            btn5.style.backgroundColor="#3D4785";
+            // mainMember.style.height="400vh";
+        }
+        function openConference(){
+            projects.style.transform="translateX(100vw)";
+            publications.style.transform="translateX(100vw)";
+            conference.style.transform="translateX(0)";
+            newspaper.style.transform="translateX(100vw)";
+            blogs.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3c4ec2d8";
+            btn4.style.backgroundColor="#3D4785";
+            btn5.style.backgroundColor="#3D4785";
+            // mainMember.style.height="210vh"
+        }
+        function openNewspaper(){
+            projects.style.transform="translateX(100vw)";
+            publications.style.transform="translateX(100vw)";
+            conference.style.transform="translateX(100vw)";
+            newspaper.style.transform="translateX(0)";
+            blogs.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3c4ec2d8";
+            btn5.style.backgroundColor="#3D4785";
+            // mainMember.style.height="175vh"
+        }
+        function openBlogs(){
+            projects.style.transform="translateX(100vw)";
+            publications.style.transform="translateX(100vw)";
+            conference.style.transform="translateX(100vw)";
+            newspaper.style.transform="translateX(100vw)";
+            blogs.style.transform="translateX(0)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3D4785";
+            btn5.style.backgroundColor="#3c4ec2d8";
+        }
+    </script>
+    <script src="./js/projectScript.js"></script>
+    <script>
+        var i=1;
+        fetch("./json/publication.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(projects){
+        let placeholder = document.querySelector("#publications");
+        let out = `
+        <h1>Journal Articles</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NO. </th>
+                        <th> TYPE </th>
+                        <th> JOURNAL </th>
+                        <th> TITLE </th>
+                        <th> AUTHOR </th>
+                        <th> YEAR </th>
+                        <th> DOI </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let project of projects){
+            out += `
+            <tr>
+                <td>  ${i} </td>
+                <td> ${project.type} </td>
+                <td> ${project.journal}</td>
+                <td> ${project.title}</td>
+                <td> ${project.author} </td>
+                <td> ${project.year} </td>
+                <td> <a href="${project.doi}">🔗</a> </td>
+            </tr>
+            `;
+            i++;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+        var l=1;
+        fetch("./json/project.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(projects){
+        let placeholder = document.querySelector("#projects");
+        let out = `
+        <h1>Projects</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NO. </th>
+                        <th> TOPIC </th>
+                        <th> PI </th>
+                        <th> FUNDING AGENCY </th>
+						<th> OTHER OFFICERS </th>
+                        <th> FINANCIAL OUTLAY </th>
+                        <th> START DATE </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let project of projects){
+            out += `
+            <tr>
+                <td>  ${l} </td>
+                <td> ${project.topic} </td>
+                <td> ${project.pi}</td>
+                <td> ${project.funda} </td>
+                <td> ${project.officer} </td>
+                <td>${project.fino}</p></td>
+                <td> ${project.date}</td>
+            </tr>
+            `;
+            l++;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+
+        var m=1;
+        fetch("./json/conference.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(projects){
+        let placeholder = document.querySelector("#conference");
+        let out = `
+        <h1>Conference Articles</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NO. </th>
+                        <th> PAPER TYPE </th>
+                        <th> CONFERENCE </th>
+                        <th> ORGANIZER </th>
+						<th> TIME </th>
+                        <th> PRESENTER </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let project of projects){
+            out += `
+            <tr>
+                <td>  ${m} </td>
+                <td> ${project.paper_type} </td>
+                <td> ${project.conference}</td>
+                <td> ${project.organizer} </td>
+                <td> ${project.time} </td>
+                <td> ${project.presenter} </td>
+            </tr>
+            `;
+            m++;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+        var j=1;
+        fetch("./json/newspaper.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(projects){
+        let placeholder = document.querySelector("#newspaper");
+        let out = `
+        <h1>Newspaper Articles</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NO. </th>
+                        <th> TYPE </th>
+                        <th> PUBLISHER </th>
+                        <th> TITLE </th>
+                        <th> YEAR </th>
+                        <th> LINK </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let project of projects){
+            out += `
+            <tr>
+                <td>  ${j} </td>
+                <td> ${project.type} </td>
+                <td> ${project.publisher} </td>
+                <td> ${project.title} </td>
+                <td> ${project.year} </td>
+                <td> <a href="${project.link}">🔗</a></td>
+            </tr>
+            `;
+            j++;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+        var k=1;
+        fetch("./json/project.json")
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(projects){
+        let placeholder = document.querySelector("#blogs");
+        let out = `
+        <h1>Blogs</h1>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> NO. </th>
+                        <th> TOPIC </th>
+                        <th> START DATE </th>
+                        <th> FIELD </th>
+                        <th> DESCRIPTION </th>
+                        <th> FINANCIAL OUTLAY </th>
+                        <th> FUNDING AGENCY </th>
+						<th> OTHER OFFICERS </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                    `;
+        for(let project of projects){
+            out += `
+            <tr>
+                <td>  ${k} </td>
+                <td> ${project.TOPIC} </td>
+                <td> ${project.START_DATE}</td>
+                <td> ${project.FIELD} </td>
+                <td> ${project.DESCRIPTION} </td>
+                <td>${project.FINANCIAL_OUTLAY}</p></td>
+                <td> ${project.FUNDING_AGENCY}</td>
+                <td> ${project.OTHER_OFFICERS}</td>
+            </tr>
+            `;
+            k++;
+        }
+        out+=`</tbody>
+            </table>`
+        placeholder.innerHTML = out;
+        });
+
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          cssMode: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          mousewheel: true,
+          keyboard: true,
+        });
+      </script>
+      <script>
+        AOS.init();
+      </script>
+</body>
+
+</html>

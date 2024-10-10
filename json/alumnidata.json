@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Dr. Prateeksha Maurya",
+        "pp": "./img/alumni/prateeksha.jpg",
+        "webp": "https://www.tapmi.edu.in/faculty/prateeksha-maurya/",
+        "gslink": "https://scholar.google.com/citations?user=oI24FeEAAAAJ&hl=en&oi=sra"
+    },
+    {
+        "name": "Dr. Haile Ademe",
+        "pp": "./img/alumni/haile.jpg",
+        "webp": "",
+        "gslink": "https://scholar.google.com/citations?user=MrbW37sAAAAJ&hl=en&oi=sra"
+    },
+    {
+        "name": "Dr. Deepabali Bhattacharjee",
+        "pp": "./img/alumni/deepabali.jpg",
+        "webp": "https://christuniversity.in/dept/faculty-details/NjM1Ng==/Njc=",
+        "gslink": "https://scholar.google.com/citations?user=MTPdGIIAAAAJ&hl=en&oi=sra"
+    },
+    {
+        "name": "Dr. Shruti Shuvam",
+        "pp": "./img/alumni/shruti.jpeg",
+        "webp": "",
+        "gslink": "https://scholar.google.com/citations?user=WlDIbxgAAAAJ&hl=en&oi=sra"
+    }
+]

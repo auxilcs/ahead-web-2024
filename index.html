@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/ticker.css" />
+    <link rel="stylesheet" href="./css/caraousalTeam.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!------ Include the above in your HEAD tag ---------->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<title>Ahead | IITR</title>
+</head>
+
+<body onload="myFunction()">
+    <div id="preLoader"></div>
+    <div class="main">
+        <header>
+            <nav>
+                <ul class='nav-bar'>
+                    <div class="logo-main">
+                        <div class="logo"><img src="./img/iit.png" alt=""></div>
+                        <div class="logo"><img src="./img/Logo-nav.png" alt=""></div>
+                    </div>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./event/event.html">Events</a></li>
+                        <li><a href="./team.html">Team</a></li>
+                        <li><a href="./research.html">Research</a></li>
+                        <li><a href="./expertise.html">Expertise</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
+            </nav>
+        </header>
+        <div class="front-logo">
+            <video autoplay loop muted>
+                <source src="./img/back.mp4" type="video/mp4">
+            </video>
+            <img src="./img/Logo.png" data-speed="7" class="layer" alt="">
+        </div>
+        <div class="onoffswitch3">
+            <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
+            <label class="onoffswitch3-label" for="myonoffswitch3">
+                <span class="onoffswitch3-inner">
+                    <span class="onoffswitch3-active">
+                        <marquee class="scroll-text"><span class="glyphicon glyphicon-forward"></span>5-day Winter School on
+                            Globalization, Development, and Gender – Female Leadership, Organisational Structure, and
+                            Performance<span class="glyphicon glyphicon-forward"></span> <a href="./event/workshops/5_day_winter_school_Glob_Dev_and_gen.html" target="_blank">APPLY</a></marquee>
+                        <span class="onoffswitch3-switch">LATEST <span class="glyphicon glyphicon-remove"></span></span>
+                    </span>
+                    <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch">LATEST</span></span>
+                </span>
+            </label>
+        </div>
+        <div class="mentor">
+            <div class="mentor-left">
+                <a href="https://iitr.ac.in/~HS/Pratap_Chandra_Mohanty" target="_blank"><img src="./img/team/PCM.png"
+                        alt="Mentor_Image"></a>
+            </div>
+            <div class="mentor-right">
+                <h1>Dr. Pratap Chandra Mohanty</h1>
+                <li>Associate Professor, Department of Humanities and Social Sciences, Indian Institute of Technology,
+                    Roorkee, India</li>
+                <li>Research Interests: Economics of Healthcare and Development</li>
+                <div class="social-links-prof">
+                    <a href="https://www.linkedin.com/in/dr-pratap-mohanty-112a3873/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/pratapjnu " target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="mailto:pratap.mohanty@hs.iitr.ac.in" target="_blank"><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.researchgate.net/profile/Pratap-Mohanty-3" target="_blank"><i
+                            class="fa-brands fa-researchgate"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="about-main">
+            <div class="about-main-left">
+                <h1>Latest News</h1>
+                <div class="scrolling-info">
+                    <div id="notice-container">
+                        <!-- information will be displayed here -->
+                    </div>
+                </div>
+            </div>
+            <div class="about-main-right">
+                <h1>Achievements</h1>
+                <div class="scrolling-info">
+                    <div id="achieve-container">
+                        <!-- information will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-do" style="text-align: left;">
+        <!-- <img src="img/about-back.avif" class="background-img" alt=""> -->
+        <h1>What We Do</h1>
+        <p class="underline"></p>
+        <p> <b>Research and Analysis:</b> We conduct comprehensive studies on a wide range of topics, including health
+            system responsiveness, pharma, gender disparities in health, elderly health, maternal health, nutrition,
+            coverage of health insurance, IT, and its impact on health, comorbidity, and polymorbidity. Our research is
+            published in leading peer-reviewed journals and presented at major conferences worldwide.
+        </p>
+        <p><b>Policy Advisory:</b> Our experts provide evidence-based recommendations to government agencies,
+            international organizations, and non-profits. We help shape policies that enhance health system efficiency,
+            equity, and sustainability.</p>
+        <p><b>Education and Training:</b> We offer NPTEL courses, workshops, and seminars to educate students and
+            interested researchers from various eminent institutions. Our programs are designed to equip participants
+            with the skills and knowledge needed to address complex health and economic issues.</p>
+        <p><b>Collaborative Projects:</b> We partner with other health economists working in academic institutions and
+            other research organizations, such as the Indian Council of Social Science Research and the Ministry of
+            Education, Government of India, to tackle interdisciplinary health challenges. We leverage diverse
+            perspectives and expertise through collaboration to achieve more comprehensive solutions.
+        </p>
+    </div>
+    <div class="article">
+        <h1>Highlights</h1>
+        <p class="underline"></p>
+    </div>
+    <div class="highlight-gallery">
+        <div class="home-highlight"></div>
+    </div>
+    <div class="contact">
+        <div class="contactLeft" data-aos="fade-right">
+            <h1>Get in Touch</h1>
+            <p>We would love to hear from you! If you have any questions, comments or suggestions, please feel free
+                to get in touch with us using the contact info below. We will do our best to respond to your inquiry
+                as soon as possible. Thank you for visiting our website!</p>
+            <div class="contactDet">
+                <img src="./img/call.png" alt="">
+                <p>+91-1332284884</p>
+            </div>
+            <div class="contactDet">
+                <img src="./img/mail.png" alt="">
+                <p href="mailto:ahead@iitr.ac.in">ahead@iitr.ac.in</p>
+            </div>
+            <div class="contactDet">
+                <img src="./img/loc.png" alt="">
+                <p>4th Floor, H-403, Department of Humanities and Social Science, Indian Institute of Technology,
+                    Roorkee. Uttarakhand, 247667</p>
+            </div>
+            <div class="iconLink">
+                <a href="https://www.linkedin.com/in/aheadiitr/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"
+                        style="color: #3d4785;"></i></a>
+                <a href="https://x.com/aheadiitr" target="_blank"><i class="fa-brands fa-twitter fa-2xl"
+                        style="color: #3d4785;"></i></a>
+            </div>
+        </div>
+        <div class="contactRight">
+            <div
+                style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%;height:400px;-webkit-box-shadow: 0 6px 30px rgba(0,0,0,.25);border-color: 0 6px 30px rgba(0,0,0,.25);">
+                <div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;"><iframe
+                        style="height:100%;width:100%;border:0;" frameborder="0"
+                        src="https://www.google.com/maps/embed/v1/place?q=Department+of+Humanities+and+Social+Sciences,+Department+of+Humanities+and+Social+Sciences,+Indian+Institute+of+Technology+Roorkee,+Roorkee,+Uttarakhand,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                </div><a class="embed-ded-maphtml" rel="nofollow" href="https://www.bootstrapskins.com/themes"
+                    id="inject-map-data">premium bootstrap themes</a>
+                <style>
+                    #embedded-map-display.text-marker {}
+
+                    .map-generator {
+                        max-width: 100%;
+                        max-height: 100%;
+                        background: none;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <!-- <img src="img/about-back.avif" class="background-img" alt=""> -->
+        <h1>Join Us</h1>
+        <p class="underline"></p>
+        <p>Whether you are a researcher, policymaker, healthcare professional, or student, we invite you to join our
+            network. Together, we can advance the field of health economics and contribute to a healthier, more
+            equitable world.
+            Stay connected with us through <b>www.iitr.ac.in/ahead</b>, follow us on Twitter and LinkedIn, and explore our
+            blog for the latest insights and updates in health economics research.
+        </p>
+    </div>
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/hardik-aa21b4227/" target="_blank">
+            <li>Designed and Developed by Hardik🔗</li>
+        </a>
+    </div>
+    <!-- <div class="footer">
+            <script type="text/javascript" src="//counter.websiteout.com/js/16/3/0/0"></script>
+        </div> -->
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    </div>
+    <script src="./js/toTop.js"></script>
+    <script src="./js/homeNotice.js"></script>
+    <script src="./js/homeCaraousal.js"></script>
+    <!-- <script src="/app.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var loader = document.getElementById("preLoader");
+        function myFunction() {
+            loader.style.display = "none";
+        }
+        fetch("./json/homecaraousalData.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (projects) {
+                let placeholder = document.querySelector("#teamCaraousal");
+                let out = ``;
+                for (let project of projects) {
+                    out += `
+            <div class="swiper-slide"><div>
+                <img src="${project.Imagepath}" alt="ImageCaraousal">
+                <p>${project.line}</p>
+                </div></div>
+            `;
+                }
+                placeholder.innerHTML = out;
+            });
+    </script>
+    <script type="text/JavaScript">
+        document.addEventListener("mousemove",parallax);
+            function parallax(e){
+                this.querySelectorAll('.layer').forEach(layer=>{
+                    const speed=layer.getAttribute('data-speed')
+
+                    const x=(window.innerWidth-e.pageX*speed)/90
+                    const  y=(window.innerHeight-e.pageY*speed)/90
+
+                    layer.style.transform=`translateX(${x}px) translateY(${y}px)`;
+
+                })
+            }
+
+
+            const newsSingleAll = document.querySelectorAll(".news-container .news-single");
+            let currentActive = 0;
+            let totalNews = newsSingleAll.length;
+            let duration = 3000;
+
+            const removeAllActive = () => {
+            newsSingleAll.forEach((n) => {
+                n.classList.remove("active");
+            });
+            };
+
+            const changeNews = () => {
+            if (currentActive >= totalNews - 1) {
+                currentActive = 0;
+            } else {
+                currentActive += 1;
+            }
+
+            removeAllActive();
+            newsSingleAll[currentActive].classList.add("active");
+            };
+
+            setInterval(changeNews, duration);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            }
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "SPSS",
+        "img_link": "./img/software/spss.png",
+        "link":"https://www.ibm.com/products/spss-statistics"
+    },
+    {
+        "name": "STATA",
+        "img_link": "./img/software/stata.png",
+        "link":"https://www.stata.com/features/documentation/"
+    },
+    {
+        "name": "R",
+        "img_link": "./img/software/r.png",
+        "link":"https://www.r-project.org/other-docs.html"
+    },
+    {
+        "name": "Python",
+        "img_link": "./img/software/python.png",
+        "link":"https://docs.python.org/3/"
+    }
+]

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../css/akashPal.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<title>Ahead | IITR</title>
+</head>
+<body onload="myFunction()">
+    <div id="preLoader"></div>
+    <div class="main">
+        <header>
+            <nav>
+                <ul class='nav-bar'>
+                    <div class="logo-main">
+                        <div class="logo"><img src="../img/iit.png" alt=""></div>
+                        <div class="logo"><img src="../img/Logo-nav.png" alt=""></div>
+                    </div>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../event/event.html">Events</a></li>
+                        <li><a href="../team.html">Team</a></li>
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="../expertise.html">Expertise</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
+            </nav>
+        </header>
+        <div class="home-container">
+            <div class="left">
+                <img src="../img/team/milind_kumar_yadav.jpeg" alt="">
+                <a href="https://drive.google.com/open?id=1SbVA2Ye--GN6YHsXGcy-R4E2i83kw0Ip" target="_blank"><div class="resume">Resume</div></a>
+            </div>
+            <div class="right">
+                <div class="right-top">
+                    <div class="right-top-left">
+                        <h1>Milind Kumar Yadav</h1>
+                        <p>Ph.D Scholar</p>
+                    </div>
+                    <di class="right-top-right">
+                        <div class="iconLink">
+                            <a href="https://www.linkedin.com/in/milind-k-yadav-205643159/"><img src="../img/linkedin.png" alt=""></a>
+                            <a href="https://www.researchgate.net/profile/Milind-Yadav-2"><img src="../img/researchGate.png" alt=""></a>
+                            <a href="mailto:mkumaryadav@hs.iitr.ac.in"><img src="../img/mailc.png" alt=""></a>
+                        </div>
+                        <p>Orchid ID: 0000-0001-9250-3104</p>
+                    </di>
+                </div>
+                <div class="article">
+                    <div class="right-bottom">
+                    <div class="resume" id="btn1" onclick="openAbout()">About</div>
+                    <div class="resume" id="btn2" onclick="openResearch()">Research</div>
+                    <div class="resume" id="btn3" onclick="openEducation()">Education</div>
+                    <div class="resume" id="btn4" onclick="openPublication()">Publications</div>
+                    <div class="resume" id="btn5" onclick="openConference()">Conferences</div>
+                </div>
+                <div class="member">
+                    <div class="teamContent" id="About">
+                        Milind is a Senior Research Fellow in the Department of Humanities and Social Sciences at IIT Roorkee. His research focus revolves around health insurance in India, as evidenced by his ongoing PhD thesis work. With a Master of Philosophy degree in Economics, Milind brings a strong academic background to his research endeavors. His experience as a field investigator on an ICSSR project and as a Teaching Assistant in the NPTEL project "Exploring Survey Data on Health Care" showcases his practical involvement in research initiatives. Notably, Milind's academic achievements include qualifying the NET-JRF exam conducted by UGC. Milind has showcased his research acumen by presenting numerous papers in both national and international conferences. His contributions to the academic community extend to publications in esteemed international journal and newspaper.
+                    </div>
+                    <div class="teamContent" id="Research">
+                        <li>Health Economics and Health Policy</li>
+                    </div>
+                    <div class="teamContent" id="Education">
+                        <li>M.Phil. (Economics) : Central University of Haryana</li>
+                        <li> M.A. (Economics): University of Allahabad</li>
+                    </div>
+                    <div class="teamContent" id="Publication">
+                        <li>Yadav MK, Mohanty PC. Determinants of choice of health insurance: empirical evidence from responses of Indian households. International Journal of Health Planning and Management. (2021) 36:1809–29. doi: 10.1002/hpm.3267</li>
+                        <li>
+                            "Universal health coverage: India needs big push" published by "The Pioneer"
+                        </li>
+                    </div>
+                    <div class="teamContent" id="Conference">
+                        <li>"An Assessment of Pradhan Mantri Jan Arogya Yojana: Evidence from the Field" presented at the Global Conclave on Sustainable Development Goals (SDGs): Progress, Challenges and Way Forward organised by the Department of Economics, Jamia Millia Islamia during 6-7, March, 2024. </li>
+
+                        <li>"Towards Distributive Equity of Health Insurance in India: Evidence from Nationally Representative Survey" presented at the 6th SANEM Annual Economists’ Conference 2023, Dhaka, Bangladesh  </li>
+                            
+                        <li>XIV, International Conference on Economics (EconWorld 2023@Athens) held in Athens, Greece on 17-19 November 2022 </li>
+                            
+                        </li>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.linkedin.com/in/hardik-aa21b4227/" target="_blank"><li>Designed and Developed by Hardik🔗</li></a>
+        </div>
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        
+    </div>
+    <script src="../js/toTop.js"></script>
+    <!-- <script src="/app.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script type="text/JavaScript">
+        var About=document.getElementById("About")
+        var Research=document.getElementById("Research")
+        var Education=document.getElementById("Education")
+        var Publication=document.getElementById("Publication")
+        var Conference=document.getElementById("Conference")
+
+        var btn1=document.getElementById("btn1")
+        var btn2=document.getElementById("btn2")
+        var btn3=document.getElementById("btn3")
+        var btn4=document.getElementById("btn4")
+        var btn5=document.getElementById("btn5")
+        // const mediaQuery = window.matchMedia('(max-width: 900px)');
+        
+        function openAbout(){
+            About.style.transform="translateX(0)";
+            Research.style.transform="translateX(100vw)";
+            Education.style.transform="translateX(100vw)";
+            Publication.style.transform="translateX(100vw)";
+            Conference.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3c4ec2d8";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3D4785";
+            btn5.style.backgroundColor="#3D4785";
+            // mainMember.style.height="100vh"
+        }
+        function openResearch(){
+            About.style.transform="translateX(100vw)";
+            Research.style.transform="translateX(0)";
+            Education.style.transform="translateX(100vw)";
+            Publication.style.transform="translateX(100vw)";
+            Conference.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3c4ec2d8";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3D4785";
+            btn5.style.backgroundColor="#3D4785";
+            // mainMember.style.height="400vh";
+        }
+        function openEducation(){
+            About.style.transform="translateX(100vw)";
+            Research.style.transform="translateX(100vw)";
+            Education.style.transform="translateX(0)";
+            Publication.style.transform="translateX(100vw)";
+            Conference.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3c4ec2d8";
+            btn4.style.backgroundColor="#3D4785";
+            btn5.style.backgroundColor="#3D4785";
+            // mainMember.style.height="210vh"
+        }
+        function openPublication(){
+            About.style.transform="translateX(100vw)";
+            Research.style.transform="translateX(100vw)";
+            Education.style.transform="translateX(100vw)";
+            Publication.style.transform="translateX(0)";
+            Conference.style.transform="translateX(100vw)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3c4ec2d8";
+            btn5.style.backgroundColor="#3D4785";
+            // mainMember.style.height="175vh"
+        }
+        function openConference(){
+            About.style.transform="translateX(100vw)";
+            Research.style.transform="translateX(100vw)";
+            Education.style.transform="translateX(100vw)";
+            Publication.style.transform="translateX(100vw)";
+            Conference.style.transform="translateX(0)";
+            btn1.style.backgroundColor="#3D4785";
+            btn2.style.backgroundColor="#3D4785";
+            btn3.style.backgroundColor="#3D4785";
+            btn4.style.backgroundColor="#3D4785";
+            btn5.style.backgroundColor="#3c4ec2d8";
+        }
+    </script>
+    <script>
+        var loader = document.getElementById("preLoader");
+        function myFunction() {
+            loader.style.display = "none";
+        }
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

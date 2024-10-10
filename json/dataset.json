@@ -1,0 +1,52 @@
+[
+    {
+        "name": "NSSO",
+        "link": "https://example.com/nsso",
+        "link_available": true
+    },
+    {
+        "name": "ASI",
+        "link": "https://example.com/asi",
+        "link_available": true
+    },
+    {
+        "name": "CMIE CPHS",
+        "link": "https://example.com/cmie_cphs",
+        "link_available": true
+    },
+    {
+        "name": "CMIE Prowess",
+        "link": "https://example.com/cmie_prowess",
+        "link_available": true
+    },
+    {
+        "name": "LASI",
+        "link": "https://example.com/lasi",
+        "link_available": true
+    },
+    {
+        "name": "SAGE",
+        "link": "https://example.com/sage",
+        "link_available": true
+    },
+    {
+        "name": "Young Lives",
+        "link": "https://example.com/young_lives",
+        "link_available": true
+    },
+    {
+        "name": "NFHS",
+        "link": "https://example.com/nfhs",
+        "link_available": true
+    },
+    {
+        "name": "Time Use",
+        "link": "https://example.com/time_use",
+        "link_available": true
+    },
+    {
+        "name": "Census",
+        "link": "https://example.com/census",
+        "link_available": true
+    }
+]
